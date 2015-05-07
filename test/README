@@ -1,0 +1,12 @@
+Testing for a9n is configured to use karma/jasmine
+
+If you already have Karma installed skip this step.
+
+    $> npm install -g karma
+    $> npm install -g jasmine
+
+
+To start the karma test harness. It is setup to continually run when changes are saved.
+    $> karma start test/unitTest.js
+
+
