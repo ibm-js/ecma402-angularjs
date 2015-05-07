@@ -1,0 +1,6 @@
+# bower components
+bower_components/
+
+# Web Storm
+.idea/
+
