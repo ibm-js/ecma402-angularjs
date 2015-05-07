@@ -33,8 +33,8 @@ This facade over the ECMA402 layer is designed to be invoked either by a directi
 and the filters utilize the [AngularJS best practice](https://docs.angularjs.org/guide/directive) of employing a naming
 prefix to prevent naming collisions. This prefix is a9n (**a**ngular-i18**n**).
 
-The names for the directives & filters were chosen to be the most intuitive bridging the gap of AngularJS
-itself and the ECMA402 api. Directives follow the form a9n_{type}Format. Filters follow the form a9n_{type}Format.
+The names for the directives & filters were chosen to be intuitive bridging the gap between **AngularJS**
+itself and the **ECMA402 api**. Directives follow the form *a9n_{type}Format*. Filters follow the form *a9n_{type}Format*.
 
 The following formatters are available:
 * date
@@ -66,7 +66,7 @@ available, see [Mozilla Developer Network](https://developer.mozilla.org/en-US/d
 
 In addition to the parameters supported by the various ECMA-402 methods, this facade supports including a locale
  parameter in with the other options. This has the benefit of simplifying the calls by not having to always supply a
- separate parameter for the locale. To facilitate a "temporary" override, an additional parameter locale parameter is
+ separate parameter for the locale. To facilitate a *temporary* override, an additional parameter locale parameter is
  available. This locale parameter overrides any locale in the options parameter. This is meant to permit easy reuse of
  sets of options where only the locale may differ.
 
@@ -89,8 +89,8 @@ In addition to the parameters supported by the various ECMA-402 methods, this fa
 
 The localization service contains the implementation of the calls down to the ECMA402 layer. This service can be
 configured to simplify normal usage so that user specific options do not have to be passed on each filter or directive.
-Configurations are available for setting a default locale as well as default options for Date, Number, Currency and
-Percent formatting.
+Configurations are available for setting a default locale as well as default options for **Date**, **Number**, **Currency** and
+**Percent** formatting.
 
 Example of configuration
 ```html
@@ -103,7 +103,7 @@ Example of configuration
 The demo program utilizes application specific configuration and can be seen in [app.js](./js/app.js)
 
 
-For configuring the underlying ECMA402 library see the [documentation section](https://github.com/ibm-js/ecma402/blob/master/README.md#documentation)
+**For configuring the underlying ECMA402 library** see the [documentation section](https://github.com/ibm-js/ecma402/blob/master/README.md#documentation)
 on the ECMA402 page.
 
 ## Credits
