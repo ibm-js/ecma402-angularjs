@@ -31,7 +31,7 @@ Then install dependencies with bower (or manually from github if you prefer to):
 
 This facade over the ECMA402 layer is designed to be invoked either by a directive or as filter. Both the directives
 and the filters utilize the [AngularJS best practice](https://docs.angularjs.org/guide/directive) of employing a naming
-prefix to prevent naming collisions. This prefix is a9n (`a`ngular-i18`n`).
+prefix to prevent naming collisions. This prefix is a9n (**a**ngular-i18**n**).
 
 The names for the directives & filters were chosen to be the most intuitive bridging the gap of AngularJS
 itself and the ECMA402 api. Directives follow the form a9n_{type}Format. Filters follow the form a9n_{type}Format.
