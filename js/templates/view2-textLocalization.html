@@ -1,0 +1,57 @@
+<div>
+    Default resource bundle is 'view2'
+</div>
+<div>
+    scope values in controller:
+    <ul>
+        <li>
+            $scope.user = {name: "<span ng-bind="user.name"></span>"};
+        </li>
+    </ul>
+</div>
+<table>
+    <thead>
+    <th>Description</th>
+    <th>HTML code</th>
+    <th>Result</th>
+    </thead>
+    <tr>
+        <td>Value of key "KEY":</td>
+        <td>&lt;span translate&gt;KEY&lt;/span&gt;</td>
+        <td>
+            <span translate>KEY</span>
+        </td>
+    </tr>
+    <tr>
+        <td>Use of translate filter:</td>
+        <td>&lt;span ng-bind="myUndefinedValue || ('DEFAULT' | translate)"&gt;&lt;/span&gt;</td>
+        <td>
+            <span ng-bind="myUndefinedValue || ('DEFAULT' | translate)"></span>
+        </td>
+    </tr>
+    <tr>
+        <td>Value of key "KEY" from main:</td>
+        <td>
+            &lt;span translate i18n-bundle="main"&gt;KEY&lt;/span&gt;
+        </td>
+        <td>
+            <span translate i18n-bundle="main">KEY</span>
+        </td>
+    </tr>
+    <tr>
+        <td>Value of key "HELLO MSG" with param:</td>
+        <td>
+            &lt;span translate i18n-bundle="main" i18n-params="user"&gt;HELLO_MSG&lt;/span&gt;
+        </td>
+        <td>
+            <span translate i18n-bundle="main" i18n-params="user">HELLO_MSG</span>
+        </td>
+    </tr>
+    <tr>
+        <td>Edit value of user.name:</td>
+        <td>
+            <input type="text" ng-model="user.name"></input>
+        </td>
+    </tr>
+</table>
+</div>

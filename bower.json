@@ -1,0 +1,13 @@
+{
+  "name": "angular-intl",
+  "description": "A sample application to test angular-intl facade",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "angular": "1.2.x",
+    "angular-route": "~1.2.x",
+    "angular-mocks": "~1.2.x",
+	"ecma402": "0.2.x",
+	"requirejs": "2.1.x"
+  }
+}

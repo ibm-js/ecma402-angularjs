@@ -1,0 +1,29 @@
+<div>
+    <h1>View {{thisView}}</h1>  &nbsp;&nbsp;&nbsp; - <a href="#/view{{nextView}}">Go to view {{nextView}}</a>
+
+    <section>
+        <div>
+            <ul class="tabs-ul" ng-init="tab = 1">
+                <li class="tabs-li" ng-class="{activeTab:tab===1}">
+                    <a class="tabs-a" href ng-click="tab = 1">Date formatting</a>
+                </li>
+                <li class="tabs-li" ng-class="{activeTab:tab===2}">
+                    <a class="tabs-a" href ng-click="tab = 2">Number formatting</a>
+                </li>
+                <li class="tabs-li" ng-class="{activeTab:tab===3}">
+                    <a class="tabs-a" href ng-click="tab = 3">ECMA402 Demo</a>
+                </li>
+                <li class="tabs-li" ng-class="{activeTab:tab===4}">
+                    <a class="tabs-a" href ng-click="tab = 4">Text localization</a>
+                </li>
+            </ul>
+        </div>
+
+        <div style="clear:both;"></div>
+
+        <div>
+            <div ng-include="fragments[tab].url"></div>
+        </div>
+
+    </section>
+</div>

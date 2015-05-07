@@ -1,0 +1,106 @@
+<!-- ----------------- -->
+<!-- Number formatting -->
+<!-- ----------------- -->
+<div ng-class="tabSection" ng-show="tab === 2">
+		<span>
+			scope values in controller:
+			<ul>
+                <li>
+                    $scope.amount = 2560.2345;
+                </li>
+                <li>
+                    $scope.vat = 0.206;
+                </li>
+                <li>
+                    $scope.price = 1530.25;
+                </li>
+            </ul>
+		</span>
+
+    <table>
+        <thead>
+        <th>Description</th>
+        <th>HTML code</th>
+        <th>Result</th>
+        </thead>
+        <tr>
+            <td>Number filter</td>
+            <td>&lt;span ng-bind="amount | a9n_numberFormat"&gt;&lt;/span&gt;</td>
+            <td><span ng-bind="amount | a9n_numberFormat"></span></td>
+        </tr>
+        <tr>
+            <td>Number directive</td>
+            <td>&lt;span a9n-number-format="amount"&gt;&lt;/span&gt;</td>
+            <td><span a9n-number-format="amount"></span></td>
+        </tr>
+        <tr>
+            <td>Number filter (de)</td>
+            <td>&lt;span ng-bind="amount | a9n_numberFormat:{locale:'de'}"&gt;&lt;/span&gt;</td>
+            <td><span ng-bind="amount | a9n_numberFormat:{locale:'de'}"></span></td>
+        </tr>
+        <tr>
+            <td>Number directive (de)</td>
+            <td>&lt;span a9n-number-format="amount" format-locale="de"&gt;&lt;/span&gt;</td>
+            <td><span a9n-number-format="amount" format-locale="de"></span></td>
+        </tr>
+        <tr>
+            <td>Number filter (options)</td>
+            <td>&lt;span ng-bind="amount | a9n_numberFormat:{maximumFractionDigits:2}"&gt;&lt;/span&gt;</td>
+            <td><span ng-bind="amount | a9n_numberFormat:{maximumFractionDigits:2}"></span></td>
+        </tr>
+        <tr>
+            <td>Number directive (options)</td>
+            <td>&lt;span a9n-number-format="amount" format-options="{maximumFractionDigits:2}"&gt;&lt;/span&gt;</td>
+            <td><span a9n-number-format="amount" format-options="{maximumFractionDigits:2}"></span></td>
+        </tr>
+        <tr>
+            <td>Edit value of scope.amount</td>
+            <td>
+                <input type="number" ng-model="amount"></input>
+            </td>
+        </tr>
+        <tr>
+            <td>Percent filter</td>
+            <td>&lt;span ng-bind="vat | a9n_percentFormat"&gt;&lt;/span&gt;</td>
+            <td><span ng-bind="vat | a9n_percentFormat"></span></td>
+        </tr>
+        <tr>
+            <td>Percent directive</td>
+            <td>&lt;span a9n-percent-format="vat"&gt;&lt;/span&gt;</td>
+            <td><span a9n-percent-format="vat"></span></td>
+        </tr>
+        <tr>
+            <td>Edit value of scope.vat</td>
+            <td>
+                <input type="number" ng-model="vat"></input>
+            </td>
+        </tr>
+        <tr>
+            <td>Currency filter</td>
+            <td>&lt;span ng-bind="price | a9n_currencyFormat"&gt;&lt;/span&gt;</td>
+            <td><span ng-bind="price | a9n_currencyFormat"></span></td>
+        </tr>
+        <tr>
+            <td>Currency directive</td>
+            <td>&lt;span a9n-currency-format="price"&gt;&lt;/span&gt;</td>
+            <td><span a9n-currency-format="price"></span></td>
+        </tr>
+        <tr>
+            <td>Currency de EUR</td>
+            <td>&lt;span ng-bind="price * 0.772260406 | a9n_currencyFormat:{locale: 'de', currency:'EUR'}"&gt;&lt;/span&gt;</td>
+            <td><span ng-bind="price * 0.772260406 | a9n_currencyFormat:{locale: 'de', currency:'EUR'}"></span></td>
+        </tr>
+        <tr>
+            <td>Currency directive de EUR</td>
+            <td>&lt;span a9n-currency-format="price * 0.772260406" format-locale="de" format-options="{currency:'EUR'}"&gt;&lt;/span&gt;</td>
+            <td><span a9n-currency-format="price * 0.772260406" format-locale="de"
+                      format-options="{currency:'EUR'}"></span></td>
+        </tr>
+        <tr>
+            <td>Edit value of scope.price</td>
+            <td>
+                <input type="number" ng-model="price"></input>
+            </td>
+        </tr>
+    </table>
+</div>

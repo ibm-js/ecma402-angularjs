@@ -1,0 +1,79 @@
+<!-- --------------- -->
+<!-- Date formatting -->
+<!-- --------------- -->
+<div ng-class="tabSection" ng-show="tab === 1">
+    <div>Default application date format:
+        <ul>
+            <li>year: "numeric",</li>
+            <li>month: "long",</li>
+            <li>day: "numeric",</li>
+            <li>hour: "numeric",</li>
+            <li>minute: "numeric",</li>
+            <li>second: "numeric"</li>
+        </ul>
+    </div>
+
+    <div>
+        scope values in controller:
+        <ul>
+            <li>
+                $scope.date = new Date(1979,6,9,0,30);
+            </li>
+        </ul>
+    </div>
+
+    <table>
+        <thead>
+        <th>Description</th>
+        <th>HTML code</th>
+        <th>Result</th>
+        </thead>
+        <tr>
+            <td>Filter (default app format)</td>
+            <td>&lt;span ng-bind="date | a9n_dateFormat"&gt;&lt;/span&gt;</td>
+            <td><span ng-bind="date | a9n_dateFormat"></span></td>
+        </tr>
+        <tr>
+            <td>Directive (default app format)</td>
+            <td>&lt;span a9n-date-format="date"&gt;&lt;/span&gt;</td>
+            <td><span a9n-date-format="date"></span></td>
+        </tr>
+        <tr>
+            <td>Filter (default format)</td>
+            <td>&lt;span ng-bind="date | a9n_dateFormat:{}"&gt;&lt;/span&gt;</td>
+            <td><span ng-bind="date | a9n_dateFormat:{}"></span></td>
+        </tr>
+        <tr>
+            <td>Directive (default format)</td>
+            <td>&lt;span a9n-date-format="date" format-options="{}"&gt;&lt;/span&gt;</td>
+            <td><span a9n-date-format="date" format-options="{}"></span></td>
+        </tr>
+        <tr>
+            <td>Filter (de, default app format)</td>
+            <td>&lt;span ng-bind="date | a9n_dateFormat:{locale:'de'}"&gt;&lt;/span&gt;</td>
+            <td><span ng-bind="date | a9n_dateFormat:{locale:'de'}"></span></td>
+        </tr>
+        <tr>
+            <td>Directive (de, default app format)</td>
+            <td>&lt;span a9n-date-format="date" format-locale="de"&gt;&lt;/span&gt;</td>
+            <td><span a9n-date-format="date" format-locale="de"></span></td>
+        </tr>
+        <tr>
+            <td>Filter (custom format)</td>
+            <td>&lt;span ng-bind="date | a9n_dateFormat:{year: 'numeric', month: 'short', day: 'numeric'}"&gt;&lt;/span&gt;</td>
+            <td><span ng-bind="date | a9n_dateFormat:{year: 'numeric', month: 'short', day: 'numeric'}"></span></td>
+        </tr>
+        <tr>
+            <td>Directive (custom format)</td>
+            <td>&lt;span a9n-date-format="date" format-options="{year: 'numeric', month: 'short', day: 'numeric'}"&gt;&lt;/span&gt;</td>
+            <td><span a9n-date-format="date" format-options="{year: 'numeric', month: 'short', day: 'numeric'}"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>
+                <button ng-click="updateDate()">Change date</button>
+            </td>
+        </tr>
+    </table>
+</div>

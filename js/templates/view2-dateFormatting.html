@@ -1,0 +1,76 @@
+<div class="section">
+    <h2>Date formatting</h2>
+    <div>Default application date format:
+        <ul>
+            <li>year: "numeric",</li>
+            <li>month: "long",</li>
+            <li>day: "numeric",</li>
+            <li>hour: "numeric",</li>
+            <li>minute: "numeric",</li>
+            <li>second: "numeric"</li>
+        </ul>
+    </div>
+
+    <div>
+        scope values in controller:
+        <ul>
+            <li>
+                $scope.date = new Date();
+            </li>
+        </ul>
+    </div>
+
+    <table>
+        <thead>
+        <th>Description</th>
+        <th>HTML code</th>
+        <th>Result</th>
+        </thead>
+        <tr>
+            <td>Date (default app format)</td>
+            <td>&lt;span ng-bind="date | a9n_dateFormat"&gt;&lt;/span&gt;</td>
+            <td><span ng-bind="date | a9n_dateFormat"></span></td>
+        </tr>
+        <tr>
+            <td>Date filter (default format)</td>
+            <td>&lt;span ng-bind="date | a9n_dateFormat:{}"&gt;&lt;/span&gt;</td>
+            <td><span ng-bind="date | a9n_dateFormat:{}"></span></td>
+        </tr>
+        <tr>
+            <td>Date filter (es locale, default app format)</td>
+            <td>&lt;span ng-bind="date | a9n_dateFormat:{locale:'es'}"&gt;&lt;/span&gt;</td>
+            <td><span ng-bind="date | a9n_dateFormat:{locale:'es'}"></span></td>
+        </tr>
+        <tr>
+            <td>Date filter (custom format)</td>
+            <td>&lt;span ng-bind="date | a9n_dateFormat:{year: 'numeric', month: 'short', day: 'numeric'}"&gt;&lt;/span&gt;</td>
+            <td><span ng-bind="date | a9n_dateFormat:{year: 'numeric', month: 'short', day: 'numeric'}"></span></td>
+        </tr>
+        <tr>
+            <td>Date directive</td>
+            <td>&lt;span a9n-date-format="date"&gt;&lt;/span&gt;</td>
+            <td><span a9n-date-format="date"></span></td>
+        </tr>
+        <tr>
+            <td>Date directive (default format)</td>
+            <td>&lt;span a9n-date-format="date" format-options="{}"&gt;&lt;/span&gt;</td>
+            <td><span a9n-date-format="date" format-options="{}"></span></td>
+        </tr>
+        <tr>
+            <td>Date filter (es locale, default app format)</td>
+            <td>&lt;span a9n-date-format="date" format-locale="es"&gt;&lt;/span&gt;</td>
+            <td><span a9n-date-format="date" format-locale="es"></span></td>
+        </tr>
+        <tr>
+            <td>Date directive (custom format)</td>
+            <td>&lt;span a9n-date-format="date" format-options="{year: 'numeric', month: 'short', day: 'numeric'}"&gt;&lt;/span&gt;</td>
+            <td><span a9n-date-format="date" format-options="{year: 'numeric', month: 'short', day: 'numeric'}"></span></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>
+                <button ng-click="updateDate()">Change date</button>
+            </td>
+        </tr>
+    </table>
+</div>
