@@ -1,7 +1,7 @@
 {
   "name": "ecma402-angularjs",
   "description": "An AngularJS facade over the ecma402 implementation",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "moduleType": "amd",
   "main": ["js/ibmjs-angular-i18n.js"],
   "dependencies": {
