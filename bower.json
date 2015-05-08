@@ -1,13 +1,30 @@
 {
-  "name": "angular-intl",
-  "description": "A sample application to test angular-intl facade",
+  "name": "ecma402-angularjs",
+  "description": "An AngularJS facade over the ecma402 implementation",
   "version": "0.0.1",
-  "private": true,
+  "moduleType": "amd",
+  "main": ["js/ibmjs-angular-i18n.js"],
   "dependencies": {
     "angular": "1.2.x",
     "angular-route": "~1.2.x",
     "angular-mocks": "~1.2.x",
 	"ecma402": "0.2.x",
 	"requirejs": "2.1.x"
+  },
+  "ignore": [
+    "css",
+    "js/controllers",
+    "js/templates",
+    "js/app.js",
+    "js/main.js",
+    "nls",
+    "test",
+    ".gitignore",
+    "index.html"
+  ],
+  "homepage": "https://github.com/ibm-js/ecma402-angularjs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ibm-js/ecma402-angularjs"
   }
 }
