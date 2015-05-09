@@ -70,19 +70,23 @@ In addition to the parameters supported by the various ECMA-402 methods, this fa
  available. This locale parameter overrides any locale in the options parameter. This is meant to permit easy reuse of
  sets of options where only the locale may differ.
 
-```html
+```javascript
     var options = {
         locale: 'en',
         year:"numeric",
         month:"numeric",
         day:"numeric"
     }
+```
+```html
     .
     .
     .
     <td>{{date | a9n_dateFormat:options}}</td>
     <td>{{date | a9n_dateFormat:options:"es"}}</td>
 ```
+
+For more complete documentation see [here](docs/index.md) Note: *under construction*
 
 
 ## Configuration
@@ -93,7 +97,7 @@ Configurations are available for setting a default locale as well as default opt
 **Percent** formatting.
 
 Example of configuration
-```html
+```javascript
 		app.config(['LocalizationServiceProvider', function(LocalizationServiceProvider){
 		    LocalizationServiceProvider.setLocale(locale);
 			LocalizationServiceProvider.setDefaultDateFormatterOptions({month: "narrow"});
