@@ -1,5 +1,5 @@
-----
-layout: doc
+---
+layout: docMain
 title: DateFormatDirective
 ---
 
