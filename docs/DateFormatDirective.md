@@ -1,6 +1,6 @@
----
-layout: [doc](index.md)
-title: [DateFormatDirective](DateFormatDirective.md)
+----
+layout: doc
+title: DateFormatDirective
 ---
 
 # DateFormatDirective
@@ -13,7 +13,7 @@ implemented by ibm-js/ecma402.
 
 <a name="attributes"></a>
 ## Directive attributes
-<p>This directive supports two attributes. The <pre>formatLocale</pre> and the <pre>formatOptions</pre> attributes. These
+<p>This directive supports two attributes. The `formatLocale` and the `formatOptions` attributes. These
 attributes allow for modifying the behavior of the format and control the look of various elements matched to a
 particular locale.</p>
 
@@ -21,7 +21,7 @@ particular locale.</p>
 <p>Specifying a locale attribute overrides the default locale and the date and time formats vary to match the localized
 form.</p>
 
-<p>This example shows using a specific locale to format the output of the variable <pre>date</pre> in German.</p>
+<p>This example shows using a specific locale to format the output of the variable `date` in German.</p>
 ```html
     <span a9n-date-format="date" format-locale="de"></span>
 ```
@@ -36,7 +36,7 @@ form.</p>
 <p>By supplying options you control what parts are displayed and how the ones that do get displayed are formatted.</p>
 
 <p>This example shows using a custom options argument which specifies numeric values for day & year but a short version
-of the month that are applied for formatting a variable <pre>date</pre></p>
+of the month that are applied for formatting a variable `date`</p>
 ```html
     <span a9n-date-format="date" format-options="{year: 'numeric', month: 'short', day: 'numeric'}"></span>
 ```
@@ -57,7 +57,7 @@ For details on the specific options available from the ECMA-402 standard DateFor
 
 <a name="usage"></a>
 ## Directive usage
-<p>The <pre>a9n-date-format</pre> directive provides the means to format a javascript date object correctly for a
+<p>The `a9n-date-format` directive provides the means to format a javascript date object correctly for a
 specific locale. Honoring that locales language and formatting style.</p>
 
 <p>Formatting options are derived either from the
@@ -65,7 +65,7 @@ default application values or supplied on the individual command.</p>
 
 <p>Typical use case is to use the directive inside a span tag as in the following examples.</p>
 
-<p>This example shows using the application default values for formatting a variable <pre>myDate</pre></p>
+<p>This example shows using the application default values for formatting a variable `myDate`</p>
 ```html
     <span a9n-date-format="myDate"></span>
 ```
@@ -76,7 +76,7 @@ default application values or supplied on the individual command.</p>
 ---
 
 <p>This example shows using an empty options argument which causes the underlying implementation defaults to be applied
-for formatting a variable <pre>date</pre></p>
+for formatting a variable `date`</p>
 ```html
     <span a9n-date-format="date" format-options="{}"></span>
 ```
@@ -87,7 +87,7 @@ for formatting a variable <pre>date</pre></p>
 ---
 
 <p>This example shows using a custom options argument which specifies numeric values for day & year but a short version
-of the month that are applied for formatting a variable <pre>date</pre></p>
+of the month that are applied for formatting a variable `date`</p>
 ```html
     <span a9n-date-format="date" format-options="{year: 'numeric', month: 'short', day: 'numeric'}"></span>
 ```
@@ -97,7 +97,7 @@ of the month that are applied for formatting a variable <pre>date</pre></p>
 ```
 ---
 
-<p>This example shows using a specific locale to format the output of the variable <pre>date</pre> in German.</p>
+<p>This example shows using a specific locale to format the output of the variable `date` in German.</p>
 ```html
     <span a9n-date-format="date" format-locale="de"></span>
 ```
