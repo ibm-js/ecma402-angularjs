@@ -3,7 +3,6 @@
     <h1>IBM ECMA-402 Demo :: re-written to utilize the a9n façade</h1>
     <h3>Click a button to change the locale being formatted.</h3>
 
-        <!-- originally AppDataController -->
     <div ng-controller="AppDataController as data" ng-app="ecma402DemoApp">
         <span>
             <table border="2" style="width:80%">
@@ -14,13 +13,13 @@
                 </tr>
                 <tr>
                     <td>Current Date/Time</td>
-                    <td>{{data.values.date | a9n_dateFormat:{year: "numeric",month: "long",day: "numeric",weekday: "short",hour: "numeric",minute: "numeric",second: "numeric"}:data.values.locale}}</td>
-                    <td>{{data.values.date | intl_dateFormat:data.values.locale:data.values.options}}</td>
+                    <td><span ng-bind='data.values.date | a9n_dateFormat:{year: "numeric",month: "long",day: "numeric",weekday: "short",hour: "numeric",minute: "numeric",second: "numeric"}:data.values.locale'></span></td>
+                    <td><span ng-bind='data.values.date | intl_dateFormat:data.values.locale:data.values.options'></span></td>
                 </tr>
                 <tr>
                     <td>Number</td>
-                    <td>{{data.values.number | a9n_numberFormat:"":data.values.locale}}</td>
-                    <td>{{data.values.number | intl_numberFormat:data.values.locale:data.values.options}}</td>
+                    <td><span ng-bind='data.values.number | a9n_numberFormat:"":data.values.locale'></span></td>
+                    <td><span ng-bind='data.values.number | intl_numberFormat:data.values.locale:data.values.options'></span></td>
                 </tr>
                 <tr>
                     <td>Currency</td>
