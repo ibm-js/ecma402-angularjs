@@ -13,7 +13,7 @@ require.config({
     deps: allTestFiles,
     callback: window.__karma__.start,
     paths: {
-        'a9n'               : '../js/ibmjs-angular-i18n',
+        'a9n'               : '../src/ibmjs-angular-i18n',
         'ecma402'           : 'ecma402',
         'angular'           : 'angular/angular',
         'angularMocks'      : 'angular-mocks/angular-mocks',

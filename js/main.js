@@ -19,7 +19,7 @@
 			'requirejs-dplugins': '../bower_components/requirejs-dplugins',
 			'requirejs-text'	: '../bower_components/requirejs-text',
 			'ecma402'			: '../bower_components/ecma402',
-            'a9n'               : 'ibmjs-angular-i18n',
+            'a9n'               : '../src/ibmjs-angular-i18n',
 			'nls'				: '../nls'
 		},
 		

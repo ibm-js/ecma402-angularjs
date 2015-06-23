@@ -497,8 +497,11 @@ define(['angular', 'ecma402/Intl'],
 
 	//
 	// filter facade over browser built-in Intl object w/ fallback to ECMAScript filter methods
+    //
+    // supplied for completeness allowing both ECMA402 & native Intl access. Recommended method is for an application
+    // to use a single configured implementation throughout your application.
 	//
-		module.filter('intl_dateFormat', ['$log', 'LocalizationService', function($log, localizationService)
+	module.filter('intl_dateFormat', ['$log', 'LocalizationService', function($log, localizationService)
 	{
 		return function( aDate, aLocale, optionsList)
 		{
