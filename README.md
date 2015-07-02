@@ -29,6 +29,9 @@ Then install dependencies with bower (or manually from github if you prefer to):
 
 ## Documentation
 
+See [here](docs/index.md) for more complete usage documentation.
+
+### Overview
 This facade over the ECMA402 layer is designed to be invoked either by a directive or as filter. Both the directives
 and the filters utilize the [AngularJS best practice](https://docs.angularjs.org/guide/directive) of employing a naming
 prefix to prevent naming collisions. This prefix is `a9n` (**a**ngular-i18**n**).
@@ -85,8 +88,6 @@ In addition to the parameters supported by the various ECMA-402 methods, this fa
     <td>{{date | a9n_dateFormat:options}}</td>
     <td>{{date | a9n_dateFormat:options:"es"}}</td>
 ```
-
-For more complete documentation see [here](docs/index.md) Note: *under construction*
 
 
 ## Configuration

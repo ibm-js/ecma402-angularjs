@@ -1,30 +1,21 @@
 ---
 layout: doc
-title: DateFormatDirective
+title: DateFormatFilter
 ---
 
-# DateFormatDirective
-The DateFormat directive provides formatting of a date object based on the ECMA-402 Internationalization API as
+# DateFormatFilter
+The DateFormat filter provides formatting of a date object based on the ECMA-402 Internationalization API as
 implemented by ibm-js/ecma402.
 
 ##### Table of Contents
-* [Directive attributes](#attributes)
-* [Directive usage](#usage)
+* [Filter options](#options)
+* [Filter usage](#usage)
 
-<a name="attributes"></a>
-## Directive attributes
-<p>This directive supports two attributes. The `formatLocale` and the `formatOptions` attributes. These
-attributes allow for modifying the behavior of the format and control the look of various elements matched to a
-particular locale.</p>
+<a name="options"></a>
 
-### formatLocale
-<p>Specifying a locale attribute overrides the default locale and the date and time formats vary to match the localized
-form.</p>
+## Format options
 
----
-
-### formatOptions
-<p>By supplying options you control what parts are displayed and how the ones that do get displayed are formatted.</p>
+<p>By supplying options you control how a number is formatted. Options are defined as per the ECMA-402 DateFormat API</p>
 
 ---
 
@@ -38,18 +29,18 @@ For details on the specific options available from the ECMA-402 standard DateFor
 
 
 <a name="usage"></a>
-## Directive usage
-<p>The `a9n-date-format` directive provides the means to format a javascript date object correctly for a
+## Filter usage
+<p>The `a9n_dateFormat` filter provides the means to format a javascript date object correctly for a
 specific locale. Honoring that locales language and formatting style.</p>
 
 <p>Formatting options are derived either from the
 default application values or supplied on the individual command.</p>
 
-<p>Typical use case is to use the directive inside a span tag as in the following examples.</p>
+<p>Typical use case is to use the filter inside a span tag as in the following examples.</p>
 
 <p>This example shows using the application default values for formatting a variable `myDate`</p>
 ```html
-    <span a9n-date-format="myDate"></span>
+    <span ng-bind="date | a9n_dateFormat"></span>
 ```
 <p>produces a result, *assuming the default application values were not modified*, such as:</p>
 ```html
@@ -60,7 +51,7 @@ default application values or supplied on the individual command.</p>
 <p>This example shows using an empty options argument which causes the underlying implementation defaults to be applied
 for formatting a variable `date`</p>
 ```html
-    <span a9n-date-format="date" format-options="{}"></span>
+    <span ng-bind="date | a9n_dateFormat:{}"></span>
 ```
 <p>produces a result such as:</p>
 ```html
@@ -71,7 +62,7 @@ for formatting a variable `date`</p>
 <p>This example shows using a custom options argument which specifies numeric values for day & year but a short version
 of the month that are applied for formatting a variable `date`</p>
 ```html
-    <span a9n-date-format="date" format-options="{year: 'numeric', month: 'short', day: 'numeric'}"></span>
+    <span ng-bind="date | a9n_dateFormat:{year: 'numeric', month: 'short', day: 'numeric'}"></span>
 ```
 <p>produces a result such as:</p>
 ```html
@@ -81,7 +72,7 @@ of the month that are applied for formatting a variable `date`</p>
 
 <p>This example shows using a specific locale to format the output of the variable `date` in German.</p>
 ```html
-    <span a9n-date-format="date" format-locale="de"></span>
+    <span ng-bind="date | a9n_dateFormat:{locale:'de'}"></span>
 ```
 <p>produces a result such as:</p>
 ```html

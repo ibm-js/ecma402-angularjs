@@ -1,8 +1,7 @@
 ---
 layout: docMain
+title: index
 ---
-
-**under construction**
 
 
 ## Setup
@@ -10,7 +9,7 @@ layout: docMain
 * [Setup](Setup.md)
 
 ## Usage
-* [Options](Options.md)
+* [Application Options](Options.md)
 
 
 
